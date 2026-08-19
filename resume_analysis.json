@@ -1,0 +1,94 @@
+{
+  "personal_info": {
+    "name": "Ayush Sharma",
+    "headline": "Professional / Developer Candidate",
+    "summary": "Goal-oriented candidate with experience in software development and technology.",
+    "email": "ayush.sharma@example.com",
+    "phone": "+91 9876543210",
+    "location": "India",
+    "linkedin": "linkedin.com/in/ayushsharma-dev",
+    "github": "github.com/ayushsharma-code",
+    "website": ""
+  },
+  "skills": {
+    "technical_skills": [
+      "Python",
+      "JavaScript",
+      "React",
+      "HTML",
+      "CSS",
+      "SQL",
+      "Node.js",
+      "Flask",
+      "Docker",
+      "Git",
+      "AWS"
+    ],
+    "soft_skills": [
+      "Communication",
+      "Problem Solving",
+      "Teamwork"
+    ],
+    "tools_and_technologies": [
+      "Git",
+      "GitHub",
+      "VS Code"
+    ],
+    "languages": [
+      "English"
+    ]
+  },
+  "work_experience": [
+    {
+      "title": "Software Engineer / Contributor",
+      "company": "Technology Solutions",
+      "location": "",
+      "dates": "Recent",
+      "achievements": [
+        "Developed web application features and improved software stability.",
+        "Collaborated with project teams to deliver software solutions."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Resume Analyser & Portfolio Generator",
+      "description": "Built an automated system for extracting resume insights and creating dynamic portfolios.",
+      "technologies": [
+        "Python",
+        "JavaScript",
+        "React",
+        "HTML"
+      ],
+      "link": ""
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Technology / Computer Science Degree",
+      "institution": "University / Institute",
+      "location": "",
+      "year": "2023",
+      "grade": ""
+    }
+  ],
+  "certifications": [],
+  "analysis": {
+    "ats_score": 82,
+    "candidate_level": "Mid-level Developer",
+    "key_strengths": [
+      "Strong technical foundation in core programming languages",
+      "Clear resume layout and structured career history"
+    ],
+    "areas_for_improvement": [
+      "Configure GEMINI_API_KEY in .env for full AI-powered deep evaluation",
+      "Add more quantifiable metrics (percentages, team sizes) to work achievements"
+    ],
+    "recommended_roles": [
+      "Software Engineer",
+      "Web Application Developer",
+      "Frontend / Backend Developer"
+    ],
+    "overall_feedback": "Resume parsed successfully. (Note: Set GEMINI_API_KEY in your .env file for live Gemini 2.5 AI extractions)."
+  }
+}

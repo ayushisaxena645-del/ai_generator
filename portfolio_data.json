@@ -1,0 +1,70 @@
+{
+  "name": "Ayush Sharma",
+  "headline": "Full Stack Engineer / Technology Enthusiast",
+  "summary": "Motivated developer with experience designing, building, and deploying software applications.",
+  "skills": {
+    "technical_skills": [
+      "Python",
+      "JavaScript",
+      "React",
+      "HTML5",
+      "CSS3",
+      "SQL",
+      "Node.js",
+      "Flask",
+      "Docker",
+      "Git"
+    ],
+    "relevant_skills": [
+      "Problem Solving",
+      "Team Collaboration",
+      "Agile Communication"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "Technology Solutions",
+      "location": "New Delhi, India",
+      "dates": "2023 - Present",
+      "responsibilities": [
+        "Developed responsive web applications and integrated backend services.",
+        "Collaborated with project teams to optimize performance and code quality."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "AI-Assisted Resume Portfolio Generator",
+      "description": "Python application that converts plain resume text into a responsive HTML portfolio webpage using Gemini API.",
+      "technologies": [
+        "Python",
+        "JavaScript",
+        "React",
+        "HTML5"
+      ],
+      "link": ""
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Technology in Computer Science",
+      "institution": "University / Institution",
+      "location": "India",
+      "year": "2023",
+      "grade": "8.5 CGPA"
+    }
+  ],
+  "achievements": [
+    "AWS Certified Cloud Practitioner",
+    "Built and published AI-Assisted Resume Portfolio Generator"
+  ],
+  "contact_and_links": {
+    "email": "ayush.sharma@example.com",
+    "phone": "+91 9876543210",
+    "location": "India",
+    "linkedin": "linkedin.com/in/ayushsharma-dev",
+    "github": "github.com/ayushsharma-code",
+    "website": ""
+  }
+}

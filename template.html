@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ name }} - Portfolio</title>
+  <style>
+    /* Embedded CSS from style.css for standalone HTML portability */
+    {{ css_content | safe }}
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- TOP ACTION TOOLBAR -->
+  <div class="action-bar">
+    <button onclick="window.print()" class="action-btn">🖨️ Print / Save PDF</button>
+  </div>
+
+  <!-- 1. NAME, 2. HEADLINE, 3. PROFESSIONAL SUMMARY, 9. CONTACT AND LINKS -->
+  <header class="hero-card">
+    <h1 class="candidate-name">{{ name if name else 'Candidate Name' }}</h1>
+    
+    {% if headline %}
+      <div class="candidate-headline">{{ headline }}</div>
+    {% endif %}
+    
+    {% if summary %}
+      <div style="font-weight: 700; font-size: 0.8rem; text-transform: uppercase; color: var(--accent-secondary); margin-bottom: 0.25rem;">Professional Summary</div>
+      <p class="candidate-summary">{{ summary }}</p>
+    {% endif %}
+
+    <!-- 9. Contact and Links -->
+    {% if contact_and_links %}
+    <div class="contact-pills">
+      {% if contact_and_links.email %}
+        <a class="contact-pill" href="mailto:{{ contact_and_links.email }}">✉ {{ contact_and_links.email }}</a>
+      {% endif %}
+      {% if contact_and_links.phone %}
+        <span class="contact-pill">📞 {{ contact_and_links.phone }}</span>
+      {% endif %}
+      {% if contact_and_links.location %}
+        <span class="contact-pill">📍 {{ contact_and_links.location }}</span>
+      {% endif %}
+      {% if contact_and_links.linkedin %}
+        <a class="contact-pill" href="{{ 'https://' + contact_and_links.linkedin if not contact_and_links.linkedin.startswith('http') else contact_and_links.linkedin }}" target="_blank">🔗 LinkedIn</a>
+      {% endif %}
+      {% if contact_and_links.github %}
+        <a class="contact-pill" href="{{ 'https://' + contact_and_links.github if not contact_and_links.github.startswith('http') else contact_and_links.github }}" target="_blank">💻 GitHub</a>
+      {% endif %}
+      {% if contact_and_links.website %}
+        <a class="contact-pill" href="{{ 'https://' + contact_and_links.website if not contact_and_links.website.startswith('http') else contact_and_links.website }}" target="_blank">🌐 Website</a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </header>
+
+  <!-- 4. SKILLS SECTION -->
+  {% if skills and (skills.technical_skills or skills.relevant_skills) %}
+  <h2 class="section-title">⚡ Skills</h2>
+  <div class="skills-grid">
+    {% if skills.technical_skills %}
+    <div class="skill-category-card">
+      <div class="category-label">Technical Skills</div>
+      <div class="tags-container">
+        {% for skill in skills.technical_skills %}
+          <span class="tag">{{ skill }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if skills.relevant_skills %}
+    <div class="skill-category-card">
+      <div class="category-label">Relevant Skills & Expertise</div>
+      <div class="tags-container">
+        {% for rel in skills.relevant_skills %}
+          <span class="tag">{{ rel }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <!-- 6. EXPERIENCE SECTION -->
+  {% if experience and experience|length > 0 %}
+  <h2 class="section-title">💼 Experience</h2>
+  <div class="card-list">
+    {% for job in experience %}
+    <div class="item-card">
+      <div class="card-header">
+        <div>
+          <div class="item-title">{{ job.title }}</div>
+          <div class="item-subtitle">{{ job.company }}{% if job.location %} • {{ job.location }}{% endif %}</div>
+        </div>
+        {% if job.dates %}
+          <div class="item-dates">{{ job.dates }}</div>
+        {% endif %}
+      </div>
+      {% if job.responsibilities and job.responsibilities|length > 0 %}
+        <ul class="bullet-list">
+          {% for bullet in job.responsibilities %}
+            <li>{{ bullet }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- 7. PROJECTS SECTION -->
+  {% if projects and projects|length > 0 %}
+  <h2 class="section-title">🚀 Projects</h2>
+  <div class="card-list">
+    {% for proj in projects %}
+    <div class="item-card">
+      <div class="card-header">
+        <div class="item-title">{{ proj.title }}</div>
+        {% if proj.link %}
+          <a href="{{ 'https://' + proj.link if not proj.link.startswith('http') else proj.link }}" target="_blank" class="contact-pill" style="font-size: 0.78rem; padding: 0.2rem 0.5rem;">Link ↗</a>
+        {% endif %}
+      </div>
+      {% if proj.description %}
+        <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 0.5rem;">{{ proj.description }}</p>
+      {% endif %}
+      {% if proj.technologies and proj.technologies|length > 0 %}
+        <div class="tags-container">
+          {% for tech in proj.technologies %}
+            <span class="tag" style="font-size: 0.75rem;">{{ tech }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- 5. EDUCATION & 8. ACHIEVEMENTS SECTION -->
+  {% if (education and education|length > 0) or (achievements and achievements|length > 0) %}
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+    
+    {% if education and education|length > 0 %}
+    <div>
+      <h2 class="section-title">🎓 Education</h2>
+      <div class="card-list">
+        {% for edu in education %}
+        <div class="item-card">
+          <div class="item-title">{{ edu.degree }}</div>
+          <div class="item-subtitle">{{ edu.institution }}{% if edu.location %} • {{ edu.location }}{% endif %}</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;">
+            {% if edu.year %}{{ edu.year }}{% endif %}
+            {% if edu.grade %} • Grade: {{ edu.grade }}{% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if achievements and achievements|length > 0 %}
+    <div>
+      <h2 class="section-title">🏆 Achievements</h2>
+      <div class="card-list">
+        {% for ach in achievements %}
+        <div class="item-card">
+          {% if ach is string %}
+            <div class="item-title" style="font-size: 0.92rem;">• {{ ach }}</div>
+          {% else %}
+            <div class="item-title">{{ ach.title if ach.title else ach }}</div>
+            {% if ach.issuer %}<div class="item-subtitle">{{ ach.issuer }}</div>{% endif %}
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+  {% endif %}
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Generated with <strong>AI-Assisted Resume Portfolio Generator</strong> • Python & Gemini API</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

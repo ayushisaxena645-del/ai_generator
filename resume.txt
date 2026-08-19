@@ -1,0 +1,42 @@
+Ayush Sharma
+Email: ayush.sharma@example.com | Phone: +91 9876543210 | Location: New Delhi, India
+LinkedIn: linkedin.com/in/ayushsharma-dev | GitHub: github.com/ayushsharma-code
+
+PROFESSIONAL SUMMARY
+Dynamic and goal-oriented Full Stack Developer & AI Enthusiast with 3+ years of experience designing, building, and deploying scalable web applications and intelligent tools. Adept at Python, JavaScript, React, Node.js, and integrating Generative AI APIs to build responsive user experiences. Proven track record of improving application performance and leading agile team projects.
+
+SKILLS
+- Programming Languages: Python, JavaScript, TypeScript, HTML5, CSS3, SQL
+- Frameworks & Libraries: React.js, Node.js, Express.js, Flask, Tailwind CSS, Bootstrap
+- AI & Data Tools: Gemini API, OpenAI API, Pandas, NumPy, Scikit-Learn
+- Databases & Cloud: PostgreSQL, MongoDB, Firebase, Git, GitHub, Docker, AWS (S3, EC2)
+- Soft Skills: Problem Solving, Team Leadership, Technical Writing, Agile Communication
+
+WORK EXPERIENCE
+Software Engineer | TechNova Solutions, New Delhi
+June 2024 - Present
+- Spearheaded the development of a real-time analytics dashboard using React and Flask, increasing client user engagement by 35%.
+- Integrated Google Gemini API into the core customer support application, reducing response times by 40%.
+- Optimized PostgreSQL database queries, reducing average API response latency by 120ms.
+
+Junior Web Developer | CodeCraft Studio, Noida
+July 2023 - May 2024
+- Developed and maintained 15+ responsive client websites using HTML, CSS, JavaScript, and Node.js.
+- Implemented automated CI/CD pipelines using GitHub Actions, streamlining product release workflows.
+- Collaborated closely with UI/UX designers to translate Figma mockups into pixel-perfect web components.
+
+PROJECTS
+AI-Assisted Resume Portfolio Generator
+- Developed a Python application using Gemini API to parse plain text resumes into structured JSON and dynamically output responsive HTML/CSS web portfolios.
+- Included candidate ATS scoring, skill breakdown, and interactive web dashboard.
+
+E-Commerce Analytics Platform
+- Built a full-stack dashboard featuring real-time sales tracking, inventory monitoring, and predictive analytics using Python, React, and PostgreSQL.
+
+EDUCATION
+Bachelor of Technology (B.Tech) in Computer Science & Engineering
+GLA University, Mathura | 2019 - 2023 | CGPA: 8.7/10
+
+CERTIFICATIONS
+- AWS Certified Cloud Practitioner (2024)
+- Google AI & Machine Learning Foundations (2023)
